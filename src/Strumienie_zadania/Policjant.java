@@ -2,7 +2,6 @@ package Strumienie_zadania;
 
 public class Policjant {
 
-    String name_policjantw;
     String nazwisko;
     int wiek;
     char plec;
