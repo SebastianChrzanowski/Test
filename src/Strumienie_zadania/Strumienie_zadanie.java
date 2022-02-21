@@ -1,9 +1,7 @@
 package Strumienie_zadania;
 
 import java.util.*;
-import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Strumienie_zadanie {
 
@@ -110,7 +108,7 @@ public class Strumienie_zadanie {
         listaStopni.entrySet().forEach(entry -> {
             entry.getValue().stream()
                     .filter(plec -> plec.getPlec() != 'k')
-                    .map(x->x.getImie() + " " + x.getNazwisko() + " "+ x.stopien)
+                    .map(x-> x.getImieKONFLIKT() + " " + x.getNazwisko() + " " + x.stopien)
                     .forEach(System.out::println);
         });
 
@@ -130,7 +128,7 @@ public class Strumienie_zadanie {
     public static Map<Integer,String> hashMapaZStreama (List<Policjant> list){
         return   list.stream()
                 .filter(pies -> pies.getWiek() > 24)
-                .collect(Collectors.toMap(Policjant::getID, pies->pies.imie+" "+pies.nazwisko+" "+ pies.stopien+ " wiek: "+ pies.wiek));
+                .collect(Collectors.toMap(Policjant::getID, pies-> pies.imieKONFLIKT + " " + pies.nazwisko + " " + pies.stopien + " wiek: " + pies.wiek));
 
     }
 
