@@ -2,15 +2,15 @@ package Strumienie_zadania;
 
 public class Policjant {
 
-    String imie;
+    String imieKONFLIKT;
     String nazwisko;
     int wiek;
     char plec;
     int ID;
     Stopien stopien;
 
-    public Policjant(String imie, String nazwisko, int wiek, char plec, int ID, Stopien stopien) {
-        this.imie = imie;
+    public Policjant(String imieKONFLIKT, String nazwisko, int wiek, char plec, int ID, Stopien stopien) {
+        this.imieKONFLIKT = imieKONFLIKT;
         this.nazwisko = nazwisko;
         this.wiek = wiek;
         this.plec = plec;
@@ -18,8 +18,8 @@ public class Policjant {
         this.stopien = stopien;
     }
 
-    public String getImie() {
-        return imie;
+    public String getImieKONFLIKT() {
+        return imieKONFLIKT;
     }
 
     public String getNazwisko() {
